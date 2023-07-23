@@ -18,9 +18,11 @@
           </ElSteps>
           <div class="sign-up-box">
             <router-link to="">
-            <transition mode="out-in">
-              <router-view></router-view>
-            </transition>
+            <router-view v-slot="{ Component }">
+              <transition mode="out-in">
+                <component :is="Component" />
+              </transition>
+            </router-view>
           </router-link>
           </div>
           <el-button class="elbutton"  @click="next">验证手机号</el-button>
