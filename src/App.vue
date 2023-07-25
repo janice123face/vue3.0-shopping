@@ -5,7 +5,6 @@
     <FooterCom></FooterCom>
    </nav>
 </template>
-
 <script>
 import HeaderCom from '@/components/header/HeaderCom'
 import FooterCom from '@/components/footer/FooterCom'
