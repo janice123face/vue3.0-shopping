@@ -1,5 +1,8 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import IndexHome from '../components/IndexHome.vue'
+import CheckPhone from '../components/signUp/CheckPhone.vue'
+import InputInfo from '../components/signUp/InputInfo.vue'
+import SignUpDone from '../components/signUp/SignUpDone.vue'
 
 const routes = [
   {
@@ -15,7 +18,29 @@ const routes = [
   {
     path: '/SignUp', // 注册
     name: 'SignUp',
-    component: () => import('../components/SignUp.vue')
+    component: () => import('../components/SignUp.vue'),
+    children: [
+      {
+        path: '',
+        name: 'index',
+        component: CheckPhone
+      },
+      {
+        path: 'checkPhone',
+        name: 'CheckPhone',
+        component: CheckPhone
+      },
+      {
+        path: 'inputInfo',
+        name: 'InputInfo',
+        component: InputInfo
+      },
+      {
+        path: 'signUpDone',
+        name: 'SignUpDone',
+        component: SignUpDone
+      }
+    ]
   },
   {
     path: '/FreeBack', // 反馈页面

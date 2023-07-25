@@ -1,5 +1,4 @@
 import { createStore } from 'vuex'
-
 export default createStore({
   state: {
     isLoading: false, // 是否展示loading动画
@@ -489,16 +488,8 @@ export default createStore({
     },
     seckillsSeconds (state) {
       return state.seckills.deadline.seconds < 10 ? `0${state.seckills.deadline.seconds}` : state.seckills.deadline.seconds
-    },
+    }
     // 字段排序函数
-    compare (property) {
-      return function (a, b) {
-        var value1 = a[property];
-        var value2 = b[property];
-        return value1 - value2;
-      }
-    },
-
     // 获取排序后的列表
   },
   mutations: {

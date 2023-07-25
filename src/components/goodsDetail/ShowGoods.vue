@@ -163,13 +163,13 @@ export default {
     }
   },
   computed: {
-    goods() {
+    goods () {
       return this.$store.state.goodsList[this.$route.params.id]
     },
-    title() {
+    title () {
       return this.goods.intro
     },
-    goodsImg() {
+    goodsImg () {
       return [this.goods.img]
     },
     hirePurchase () {

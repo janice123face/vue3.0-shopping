@@ -35,7 +35,7 @@
             </ul>
           </div>
            <div class="goods-list">
-            <div class="goods-show-info" v-for="item in goodsList" :key="index">
+            <div class="goods-show-info" v-for="(item,index) in $store.state.goodsList" :key="index">
               <div class="goods-show-img">
                 <router-link :to="'/goodsDetail/' + item.id"><img :src="item.img"/></router-link>
               </div>
@@ -88,8 +88,8 @@ export default {
     }
   },
   computed: {
-    goodsList() {
-      const goodsList = this.$store.state.goodsList.map((item, index) => (item.id = index, item))
+    goodsList () {
+      const goodsList = this.$store.state.goodsList.map((item, index) => (item.id = index))
       return goodsList.sort(compare(this.sortBy, this.desc))
     }
   },

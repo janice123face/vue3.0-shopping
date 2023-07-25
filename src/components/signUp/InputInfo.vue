@@ -1,25 +1,24 @@
 <template>
   <div class="info-form">
-     <Form ref="formValidate" :model="formValidate" :rules="ruleValidate" :label-width="80" >
-        <FormItem label="用户名" prop="name">
-            <i-input v-model="formValidate.name" clearable size="large" placeholder="请输入你的姓名"></i-input>
-        </FormItem>
-        <FormItem label="邮箱" prop="mail">
-            <i-input v-model="formValidate.mail" clearable size="large" placeholder="请输入你的邮箱"></i-input>
-        </FormItem>
-        <FormItem label="密码" prop="password">
-            <i-input type="password" v-model="formValidate.password" clearable size="large" placeholder="请输入你的密码"></i-input>
-        </FormItem>
-        <FormItem label="确认密码" prop="repassword">
-            <i-input type="password" v-model="formValidate.repassword" clearable size="large" placeholder="请再次输入你的密码"></i-input>
-        </FormItem>
+     <ElForm ref="formValidate" :model="formValidate" :rules="ruleValidate" :label-width="80" >
+        <ElFormItem label="用户名" prop="name">
+            <ElInput v-model="formValidate.name" clearable size="large" placeholder="请输入你的姓名"></ElInput>
+        </ElFormItem>
+        <ElFormItem label="邮箱" prop="mail">
+            <ElInput v-model="formValidate.mail" clearable size="large" placeholder="请输入你的邮箱"></ElInput>
+        </ElFormItem>
+        <ElFormItem label="密码" prop="password">
+            <ElInput type="password" v-model="formValidate.password" clearable size="large" placeholder="请输入你的密码"></ElInput>
+        </ElFormItem>
+        <ElFormItem label="确认密码" prop="repassword">
+            <ElInput type="password" v-model="formValidate.repassword" clearable size="large" placeholder="请再次输入你的密码"></ElInput>
+        </ElFormItem>
         <ElButton type="danger" size="large" long @click="handleSubmit('formValidate')">注册</ElButton>
-    </Form>
+    </ElForm>
   </div>
 </template>
 
 <script>
-import store from '@/vuex/store'
 import { mapMutations, mapActions } from 'vuex'
 export default {
   name: 'InputInfo',

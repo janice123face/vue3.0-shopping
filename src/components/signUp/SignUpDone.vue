@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <p><Icon type="ios-checkmark-outline"></Icon></p>
+    <p><ElIcon type="ios-checkmark-outline"></ElIcon></p>
     <router-link to="/login"><ElButton type="success" size="large" long class="btn-success">注册成功</ElButton></router-link>
   </div>
 </template>
